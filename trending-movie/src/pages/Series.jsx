@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import Header from '../components/Header.jsx'
 import MovieCard from '../components/MovieCard.jsx'
 
 const TMDB_URL   = 'https://api.themoviedb.org/3/trending/tv/day'
@@ -32,23 +31,20 @@ function Series() {
   }, [])
 
   return (
-    <>
-      <Header />
-      <main className="page">
-        <h2 className="page__title">📺 Séries em Alta Hoje</h2>
+    <main className="page">
+      <h2 className="page__title">📺 Séries em Alta Hoje</h2>
 
-        {loading && <p className="status">Carregando...</p>}
-        {error   && <p className="status status--error">Erro: {error}</p>}
+      {loading && <p className="status">Carregando...</p>}
+      {error   && <p className="status status--error">Erro: {error}</p>}
 
-        {!loading && !error && (
-          <div className="grid">
-            {series.map((serie) => (
-              <MovieCard key={serie.id} {...serie} />
-            ))}
-          </div>
-        )}
-      </main>
-    </>
+      {!loading && !error && (
+        <div className="grid">
+          {series.map((serie) => (
+            <MovieCard key={serie.id} {...serie} />
+          ))}
+        </div>
+      )}
+    </main>
   )
 }
 

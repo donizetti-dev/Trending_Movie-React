@@ -196,6 +196,27 @@ Revisão e correção de inconsistências entre o código real e a documentaçã
 
 ---
 
+
+
+---
+
+### v0.9.0 — Layout Compartilhado via App.jsx
+**Data:** 13/09/2026  
+**Estado:** ✅ Concluído
+
+`App.jsx` passou a funcionar como layout global da aplicação, centralizando o `<Header />` e usando `<Outlet />` do React Router para renderizar a página filha de cada rota. As páginas perderam a responsabilidade de importar e renderizar o Header individualmente.
+
+| Arquivo | Operação | Descrição |
+|---|---|---|
+| `src/App.jsx` | MODIFICADO | Agora é o layout compartilhado — importa `Header` e `Outlet`, não mais `Home` diretamente |
+| `src/main.jsx` | MODIFICADO | Rotas aninhadas sob `<App />` como elemento pai com `children` |
+| `src/pages/Home.jsx` | MODIFICADO | Removido import e uso de `<Header />` — retorna apenas `<main>` |
+| `src/pages/Movies.jsx` | MODIFICADO | Removido import e uso de `<Header />` — retorna apenas `<main>` |
+| `src/pages/Series.jsx` | MODIFICADO | Removido import e uso de `<Header />` — retorna apenas `<main>` |
+| `docs/architecture.md` | MODIFICADO | Seção de rotas atualizada com explicação do padrão de layout aninhado e diagrama de estrutura |
+
+---
+
 ## 📌 Resumo Rápido
 
 | Área | Estado |
@@ -207,3 +228,4 @@ Revisão e correção de inconsistências entre o código real e a documentaçã
 | Fetch TMDB (filmes e séries) | ✅ Funcionando |
 | Estilos (dark mode, grid, responsivo) | ✅ Implementados |
 | Documentação | ✅ Corrigida e alinhada com o código |
+

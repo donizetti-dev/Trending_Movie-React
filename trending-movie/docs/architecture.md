@@ -22,6 +22,17 @@ src/
 
 ## 3. Páginas e Rotas
 
+`App.jsx` funciona como **layout compartilhado**: renderiza `<Header />` uma única vez e usa `<Outlet />` (React Router) para injetar a página filha correspondente à rota ativa. As páginas filhas não importam nem renderizam o Header individualmente.
+
+```
+App.jsx (layout)
+└── <Header />
+└── <Outlet />
+    ├── / → Home.jsx
+    ├── /movies → Movies.jsx
+    └── /series → Series.jsx
+```
+
 | Página | Rota | Objetivo |
 |---|---|---|
 | Home | `/` | Apresentar o site ao usuário |

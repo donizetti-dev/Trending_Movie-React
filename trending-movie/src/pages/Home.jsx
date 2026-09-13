@@ -1,10 +1,6 @@
-import Header from '../components/Header.jsx'
-
 function Home() {
   return (
-    <>
-      <Header />
-      <main className="home">
+    <main className="home">
         <div className="home__hero">
           <h2 className="home__title">O que está em alta hoje?</h2>
           <p className="home__description">
@@ -17,7 +13,6 @@ function Home() {
           </div>
         </div>
       </main>
-    </>
   )
 }
 

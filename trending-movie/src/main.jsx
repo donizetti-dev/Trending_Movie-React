@@ -4,13 +4,19 @@ import { RouterProvider } from 'react-router/dom'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
+import Home from './pages/Home.jsx'
 import Movies from './pages/Movies.jsx'
 import Series from './pages/Series.jsx'
 
 const router = createBrowserRouter([
-  { path: '/',       element: <App /> },
-  { path: '/movies', element: <Movies /> },
-  { path: '/series', element: <Series /> },
+  {
+    element: <App />,
+    children: [
+      { path: '/',       element: <Home /> },
+      { path: '/movies', element: <Movies /> },
+      { path: '/series', element: <Series /> },
+    ],
+  },
 ])
 
 createRoot(document.getElementById('root')).render(
