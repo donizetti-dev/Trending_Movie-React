@@ -70,6 +70,7 @@ App.jsx (layout)
 | `react` | Criação de componentes e hooks | Base do projeto |
 | `react-dom` | Renderização no DOM | Base do projeto |
 | `react-router` | Roteamento entre páginas | Navegação sem recarregar a página |
+| `react-icons` | Ícones SVG (Font Awesome 6 — `fa6`) | Biblioteca de ícones padrão |
 | TMDB API | Fonte de dados de filmes e séries | API gratuita com dados atualizados diariamente |
 
 ---

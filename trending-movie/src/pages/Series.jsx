@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { FaTv } from 'react-icons/fa6'
 import MovieCard from '../components/MovieCard.jsx'
 
 const TMDB_URL   = 'https://api.themoviedb.org/3/trending/tv/day'
@@ -32,7 +33,7 @@ function Series() {
 
   return (
     <main className="page">
-      <h2 className="page__title">📺 Séries em Alta Hoje</h2>
+      <h2 className="page__title"><FaTv /> Séries em Alta Hoje</h2>
 
       {loading && <p className="status">Carregando...</p>}
       {error   && <p className="status status--error">Erro: {error}</p>}

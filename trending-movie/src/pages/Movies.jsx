@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { FaFilm } from 'react-icons/fa6'
 import MovieCard from '../components/MovieCard.jsx'
 
 const TMDB_URL   = 'https://api.themoviedb.org/3/trending/movie/day'
@@ -32,7 +33,7 @@ function Movies() {
 
   return (
     <main className="page">
-      <h2 className="page__title">🎬 Filmes em Alta Hoje</h2>
+      <h2 className="page__title"><FaFilm /> Filmes em Alta Hoje</h2>
 
       {loading && <p className="status">Carregando...</p>}
       {error   && <p className="status status--error">Erro: {error}</p>}

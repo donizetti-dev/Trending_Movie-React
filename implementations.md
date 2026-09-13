@@ -217,6 +217,38 @@ Revisão e correção de inconsistências entre o código real e a documentaçã
 
 ---
 
+
+
+---
+
+### v0.10.0 — Biblioteca de Ícones e Centralização do Header
+**Data:** 13/09/2026  
+**Estado:** ✅ Concluído
+
+Substituição de todos os emojis por ícones SVG da biblioteca `react-icons` (conjunto Font Awesome 6 — `fa6`). Adição de ícones aos links do Header e centralização dos 3 elementos de navegação.
+
+**Ícones utilizados (todos de `react-icons/fa6`):**
+
+| Ícone | Componente | Onde é usado |
+|---|---|---|
+| `FaFilm` | Filme/Cinema | Logo do Header, link Filmes, título Movies, botão Home |
+| `FaHouse` | Casa | Link Home no Header |
+| `FaTv` | Televisão | Link Séries no Header, título Series, botão Home |
+| `FaStar` | Estrela | Nota de avaliação no MovieCard |
+
+| Arquivo | Operação | Descrição |
+|---|---|---|
+| `package.json` | MODIFICADO | Adicionada dependência `react-icons` |
+| `src/components/Header.jsx` | MODIFICADO | Ícones `FaFilm`, `FaHouse`, `FaTv` adicionados ao logo e aos 3 links de navegação |
+| `src/components/MovieCard.jsx` | MODIFICADO | Emoji ⭐ substituído por `FaStar` |
+| `src/pages/Home.jsx` | MODIFICADO | Emojis dos botões substituídos por `FaFilm` e `FaTv` |
+| `src/pages/Movies.jsx` | MODIFICADO | Emoji do título substituído por `FaFilm` |
+| `src/pages/Series.jsx` | MODIFICADO | Emoji do título substituído por `FaTv` |
+| `src/index.css` | MODIFICADO | Nav centralizada (`flex: 1`, `justify-content: center`); logo, links, títulos e botões com `display: flex` para alinhar ícone + texto |
+| `docs/architecture.md` | MODIFICADO | `react-icons` adicionada à tabela de dependências |
+
+---
+
 ## 📌 Resumo Rápido
 
 | Área | Estado |
@@ -228,4 +260,5 @@ Revisão e correção de inconsistências entre o código real e a documentaçã
 | Fetch TMDB (filmes e séries) | ✅ Funcionando |
 | Estilos (dark mode, grid, responsivo) | ✅ Implementados |
 | Documentação | ✅ Corrigida e alinhada com o código |
+
 

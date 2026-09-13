@@ -1,3 +1,5 @@
+import { FaStar } from 'react-icons/fa6'
+
 const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500'
 
 function MovieCard({ title, name, poster_path, vote_average, release_date, first_air_date }) {
@@ -19,7 +21,7 @@ function MovieCard({ title, name, poster_path, vote_average, release_date, first
       )}
       <div className="card__info">
         <h3 className="card__title">{displayTitle}</h3>
-        <p className="card__rating">⭐ {vote_average?.toFixed(1)}</p>
+        <p className="card__rating"><FaStar /> {vote_average?.toFixed(1)}</p>
         {displayDate && (
           <p className="card__date">{new Date(displayDate).getFullYear()}</p>
         )}

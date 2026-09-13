@@ -42,7 +42,6 @@ a:hover {
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 0 2rem;
   height: 64px;
   background-color: var(--bg-header);
@@ -53,6 +52,9 @@ a:hover {
 }
 
 .header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -60,11 +62,16 @@ a:hover {
 }
 
 .header__nav {
+  flex: 1;
   display: flex;
+  justify-content: center;
   gap: 1.5rem;
 }
 
 .header__nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
   color: var(--text-secondary);
   font-size: 0.95rem;
   font-weight: 500;
@@ -120,7 +127,9 @@ a:hover {
 }
 
 .home__btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   padding: 0.65rem 1.5rem;
   border-radius: 8px;
   background-color: var(--accent);
@@ -148,6 +157,9 @@ a:hover {
 }
 
 .page__title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -225,6 +237,9 @@ a:hover {
 }
 
 .card__rating {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
   font-size: 0.85rem;
   color: var(--accent);
   font-weight: 600;
