@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import { FaStar } from 'react-icons/fa6'
 
 const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500'
@@ -5,9 +6,12 @@ const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500'
 const MovieCard = (props) => {
   const displayTitle = props.title || props.name
   const displayDate  = props.release_date || props.first_air_date
+  const linkPath     = props.media_type === 'tv'
+    ? `/series/${props.id}`
+    : `/movies/${props.id}`
 
   return (
-    <div className="card">
+    <Link to={linkPath} className="card">
       {props.poster_path ? (
         <img
           className="card__poster"
@@ -26,7 +30,7 @@ const MovieCard = (props) => {
           <p className="card__date">{new Date(displayDate).getFullYear()}</p>
         )}
       </div>
-    </div>
+    </Link>
   )
 }
 

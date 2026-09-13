@@ -14,7 +14,8 @@ src/
 ├── pages/
 │   ├── Home.jsx
 │   ├── Movies.jsx
-│   └── Series.jsx
+│   ├── Series.jsx
+│   └── Detail.jsx
 ├── App.jsx
 ├── main.jsx
 └── index.css
@@ -28,9 +29,11 @@ src/
 App.jsx (layout)
 └── <Header />
 └── <Outlet />
-    ├── / → Home.jsx
-    ├── /movies → Movies.jsx
-    └── /series → Series.jsx
+    ├── /              → Home.jsx
+    ├── /movies        → Movies.jsx
+    ├── /series        → Series.jsx
+    ├── /movies/:id    → Detail.jsx (mediaType="movie")
+    └── /series/:id    → Detail.jsx (mediaType="series")
 ```
 
 | Página | Rota | Objetivo |
@@ -38,6 +41,7 @@ App.jsx (layout)
 | Home | `/` | Apresentar o site ao usuário |
 | Filmes | `/movies` | Listar filmes em alta do dia |
 | Séries | `/series` | Listar séries em alta do dia |
+| Detalhe | `/movies/:id` e `/series/:id` | Exibir detalhes de um filme ou série |
 
 ## 4. Componentes
 

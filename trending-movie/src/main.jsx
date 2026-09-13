@@ -7,14 +7,17 @@ import App from './App.jsx'
 import Home from './pages/Home.jsx'
 import Movies from './pages/Movies.jsx'
 import Series from './pages/Series.jsx'
+import Detail from './pages/Detail.jsx'
 
 const router = createBrowserRouter([
   {
     element: <App />,
     children: [
-      { path: '/',       element: <Home /> },
-      { path: '/movies', element: <Movies /> },
-      { path: '/series', element: <Series /> },
+      { path: '/',           element: <Home /> },
+      { path: '/movies',     element: <Movies /> },
+      { path: '/series',     element: <Series /> },
+      { path: '/movies/:id', element: <Detail mediaType="movie" /> },
+      { path: '/series/:id', element: <Detail mediaType="series" /> },
     ],
   },
 ])

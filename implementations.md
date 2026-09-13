@@ -249,6 +249,36 @@ Substituição de todos os emojis por ícones SVG da biblioteca `react-icons` (c
 
 ---
 
+
+
+---
+
+### v0.11.0 — Rotas Dinâmicas e Página de Detalhe
+**Data:** 13/09/2026  
+**Estado:** ✅ Concluído
+
+Implementação de rotas dinâmicas `/movies/:id` e `/series/:id`. Cards passaram a ser clicáveis e redirecionam para a página de detalhe do item. O campo `media_type` retornado pela TMDB é usado para determinar o tipo da rota sem necessidade de prop extra.
+
+| Arquivo | Operação | Descrição |
+|---|---|---|
+| `src/pages/Detail.jsx` | CRIADO | Página de detalhe dinâmica — usa `useParams` para capturar o `id`, `useNavigate` para o botão Voltar e busca dados da TMDB (`/movie/:id` ou `/tv/:id`) |
+| `src/main.jsx` | MODIFICADO | Adicionadas rotas `/movies/:id` e `/series/:id` apontando para `<Detail mediaType="movie\|series" />` |
+| `src/components/MovieCard.jsx` | MODIFICADO | Substituída a `<div className="card">` por `<Link className="card">` — path gerado com `props.media_type` e `props.id` |
+| `src/index.css` | MODIFICADO | Adicionados estilos `.detail`, `.detail__back`, `.detail__content`, `.detail__poster`, `.detail__info`, `.detail__meta`, `.detail__rating`, `.detail__genres`, `.detail__genre`, `.detail__overview` e `a.card` |
+| `docs/architecture.md` | MODIFICADO | Estrutura de pastas, diagrama de rotas e tabela de páginas atualizados |
+
+**Informações exibidas na página de detalhe:**
+- Poster (mesmo do card)
+- Título / Nome
+- Nota ⭐ (FaStar)
+- Ano de lançamento
+- Duração em minutos (quando disponível)
+- Gêneros (como tags)
+- Sinopse (overview em pt-BR via `language=pt-BR`)
+- Botão Voltar com `FaArrowLeft` usando `navigate(-1)`
+
+---
+
 ## 📌 Resumo Rápido
 
 | Área | Estado |
@@ -260,5 +290,6 @@ Substituição de todos os emojis por ícones SVG da biblioteca `react-icons` (c
 | Fetch TMDB (filmes e séries) | ✅ Funcionando |
 | Estilos (dark mode, grid, responsivo) | ✅ Implementados |
 | Documentação | ✅ Corrigida e alinhada com o código |
+
 
 
