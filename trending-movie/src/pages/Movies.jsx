@@ -38,7 +38,7 @@ function Movies() {
         <h2 className="page__title">🎬 Filmes em Alta Hoje</h2>
 
         {loading && <p className="status">Carregando...</p>}
-        {error   && <p className="status status--error">Erro: {error}</p>}
+        {error   && <h2 className="status status--error">BUSCA INDISPONIVEL</h2>}
 
         {!loading && !error && (
           <div className="grid">
