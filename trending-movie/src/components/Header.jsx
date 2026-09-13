@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router'
 import { FaFilm, FaHouse, FaTv } from 'react-icons/fa6'
 
-function Header() {
+const Header = () => {
   return (
     <header className="header">
       <h1 className="header__logo">

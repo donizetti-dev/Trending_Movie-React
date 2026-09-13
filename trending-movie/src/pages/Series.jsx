@@ -5,7 +5,7 @@ import MovieCard from '../components/MovieCard.jsx'
 const TMDB_URL   = 'https://api.themoviedb.org/3/trending/tv/day'
 const TMDB_TOKEN = import.meta.env.VITE_TMDB_TOKEN
 
-function Series() {
+const Series = () => {
   const [series,  setSeries]  = useState([])
   const [loading, setLoading] = useState(true)
   const [error,   setError]   = useState(null)

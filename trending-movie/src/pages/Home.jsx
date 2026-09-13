@@ -1,6 +1,6 @@
 import { FaFilm, FaTv } from 'react-icons/fa6'
 
-function Home() {
+const Home = () => {
   return (
     <main className="home">
       <div className="home__hero">
