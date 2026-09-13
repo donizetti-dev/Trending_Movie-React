@@ -1,4 +1,5 @@
 import { FaFilm, FaTv } from 'react-icons/fa6'
+import { NavLink } from 'react-router'
 
 const Home = () => {
   return (
@@ -10,8 +11,8 @@ const Home = () => {
           pela API <a href="https://www.themoviedb.org" target="_blank" rel="noreferrer">TMDB</a>.
         </p>
         <div className="home__links">
-          <a className="home__btn" href="/movies"><FaFilm /> Ver Filmes</a>
-          <a className="home__btn home__btn--secondary" href="/series"><FaTv /> Ver Séries</a>
+          <NavLink  className="home__btn" to="/movies"><FaFilm />Ver Filmes</NavLink>
+          <NavLink className="home__btn home__btn--secondary"  to="/series"><FaTv />Ver Séries</NavLink>
         </div>
       </div>
     </main>
