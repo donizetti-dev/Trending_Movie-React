@@ -7,6 +7,7 @@ Aplicação web desenvolvida em React para exploração, busca e recomendação 
 ## Integrantes do Grupo
 
 - **Donizetti Roberto Batista Santos Junior** — RM569576
+- **Arthur Meneghin Nery** — RM569088
 <!-- Adicione os outros integrantes abaixo se houver -->
 <!-- - Nome do Integrante — RM000000 -->
 
